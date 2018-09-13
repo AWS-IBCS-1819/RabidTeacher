@@ -23,7 +23,8 @@ public class AboutMe{
 public static void main(String[] args) {
 
   AboutMe katty = new AboutMe(); //constructor/organization method
-  System.out.println("About Katty");//basic text
+  System.out.println("About Katty"
+  + " Options: \n -birthday\n -birth-place\n -patronus\n -roommate\n -dorm-group\n -pets\n -pokemon");//basic text
 
   Scanner kattyIn = new Scanner (System.in); //creation of scanner
   String personIn = kattyIn.next();//tells scanner what to do
@@ -34,10 +35,10 @@ public static void main(String[] args) {
   else if(personIn.equals("pokemon")){
     System.out.println("Katty's favorite pokemon is " + katty.Pokemon);
     }
-  else if(personIn.equals("room mate")){
-    System.out.println("Katty's room mate is " + katty.RoomMate);
+  else if(personIn.equals("roommate")){
+    System.out.println("Katty's roommate is " + katty.RoomMate);
     }
-  else if(personIn.equals("dorm group")){
+  else if(personIn.equals("dorm-group")){
     System.out.println("Katty's dorm group is " + katty.DormGroup);
     }
   else if(personIn.equals("pets")){
@@ -46,7 +47,7 @@ public static void main(String[] args) {
   else if(personIn.equals("patronus")){
     System.out.println("Katty's patronus is " + katty.Patronus);
     }
-    else if(personIn.equals("birth place")){
+    else if(personIn.equals("birth-place")){
       System.out.println("Katty's was born in " + katty.BirthPlace);
       }
 else System.out.println("We don't know this yet, but here's a joke Q: Why don't cannibals eat clowns? A: Because they taste funny");
