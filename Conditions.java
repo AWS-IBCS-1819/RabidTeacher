@@ -23,8 +23,8 @@ class Conditions{
     }
 
     System.out.println(Build);
-    int numO = 0;
-    for (int i = 0; i < Build.length() -7; i = i + 1){
+    int numO = 0;             //use length instead of capacity because that works with stringbuilders total possible length
+    for (int i = 0; i < Build.length() -7; i = i + 1){//can be written as just i++ instead of i= i +1
         if (Build.substring(i, i + 7).equals("Dorothy")){//i stands for index
           System.out.println(Build.substring(i, i + 7));
           numO = numO + 1; //can also be written as numO++
