@@ -9,13 +9,15 @@ public class Reverse {
     Scanner scan = new Scanner(System.in);
     String word = scan.nextLine();
 
-    for (int i = word.length()-1; i>=0;i--)
-      System.out.print(word.charAt(i));
-
+    for (int i = word.length()-1; i>=0;i--){
+      System.out.print(word.charAt (i));
+    }
+    System.out.println("\n");
   }
+
 //using a recursion (this took me a solid hour)
 
-  public static void main(String[] args) {
+/*  public static void main(String[] args) {
        String word;
 
        Scanner scan = new Scanner(System.in);
@@ -32,5 +34,5 @@ public class Reverse {
       else {
         return reverse(word.substring(1)) + word.charAt(0);
    }
- }
+ }*/
 }
