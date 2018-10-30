@@ -60,12 +60,12 @@ public class Blackjack {
     System.out.println("\nDealer's card:\n" + b.compHand.get(0).getName());//prints dealers cards and value in total
 
 
-while(b.calculateHand(b.userHand)<=21){
+while(b.calculateHand(b.userHand)<=21){//while the user does not bust the game continues
 
 System.out.println("\nHere's your options\n---------------\nHit\nStay\nQuit\n");//prints options
        Scanner input = new Scanner(System.in);//creation of scanner
        String result = input.next();//scanning for user input
-
+//user logic
     if(result.equals("Hit")){
         b.userHand.add(b.d.drawCard());
         System.out.println("Your cards are:\n" + b.nameHand(b.userHand) + " " + "\nYour total is now:\n" + " " + Integer.toString(b.calculateHand(b.userHand))+"\n---------------");//print card names after cards have been drawn
@@ -79,15 +79,15 @@ System.out.println("\nHere's your options\n---------------\nHit\nStay\nQuit\n");
 //Dealer Logic
     boolean Bust = false;//a boolean is used so that the game doesn't unescessarily go through the dealer logic
     if (b.calculateHand(b.userHand)>21){
-     Bust = true;
+     Bust = true;//if bust is true the game continues to the "win"statements, if false it carries on to dealer logic
 }
   if(Bust = false){
       while (b.calculateHand(b.compHand)<= 16){//if the dealer's cards are less than 16 when the user stays the dealer will draw a card
-        b.compHand.add(b.d.drawCard());
-        System.out.println("Dealer's cards are:\n" + b.nameHand(b.compHand) + " " + "\nDealer's total is now:\n" + " " + Integer.toString(b.calculateHand(b.compHand))+"\n---------------");
+        b.compHand.add(b.d.drawCard());//drawing card to dealer's hand
+        System.out.println("Dealer's cards are:\n" + b.nameHand(b.compHand) + " " + "\nDealer's total is now:\n" + " " + Integer.toString(b.calculateHand(b.compHand))+"\n---------------");//printing results
+      }
 }
-}
-
+//Win statements
       if (b.calculateHand(b.userHand) == 21){//if you get 21 then you win so it automatically prints out that you won
              System.out.println("\nYou win!\n");
           }else if (b.calculateHand(b.compHand) == 21){//if your amount is already equal to 21 or is exactly 21 you win
@@ -120,26 +120,3 @@ System.out.println("\nHere's your options\n---------------\nHit\nStay\nQuit\n");
         }
 
       }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//dealer logic if < 16 draw if greater break value > 16
-//player logic if < 16 draw else stay
