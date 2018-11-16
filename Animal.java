@@ -3,40 +3,28 @@ import java.io.*;
 
 public class Animal{//like deck
 
-  ArrayList<Pokemon> poke;
-  ArrayList<Pokemon> type;
+ String name;
+ String element;
 
 
-public static void main(String[] args) {
+   public void setName(String n) {
+     name = n;
+   }
 
-  StringBuilder poke = new StringBuilder();
-  StringBuilder type = new StringBuilder();
-  StringBuilder buildWaste = new StringBuilder();
+   public void setValue(String k) {
+     element = k;
+   }
 
-  try {
-    File text = new File("Pokemon.txt");
-    Scanner sn = new Scanner(text); // read the text-file
+   public String getName() {
+     return name;
+   }
 
-  while (sn.hasNext()) {
-    poke.append(sn.next());
-    buildWaste.append(sn.next());
-    poke.append(" "); // add space for formatting
-    poke.append("\n");
-    type.append(sn.next());
-    type.append(" "); // add space for formatting
-    type.append("\n");
-  }
+   public String getElement() {
+     return element;
+   }
 
-System.out.println(poke);
-System.out.println(type);
-
-    }
-    catch (FileNotFoundException e) { // if the file is not found, shows an error
-      e.printStackTrace();
-      }
-
-  Habitat h = new Habitat();
-  h.setName(poke);
-  h.setValue(type);
-}
-}
+   public Animal(String n,String k) {
+     name = n;
+     element = k;
+   }
+ }
