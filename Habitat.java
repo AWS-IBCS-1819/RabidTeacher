@@ -1,30 +1,27 @@
 import java.util.*;
 import java.io.*;
 
-
 public class Habitat{
 
-  String poke;
-  String type;
+  String region;
+  String leader;
 
-  public void setName(String n) {
-    poke = n;
-  }
+  public void setName(String r) {
+    region = r;
+    }
 
-  public void setValue(String v) {
-    type = v;
-  }
+     public void setValue(String l) {
+       leader = l;
+     }
+     public String getRegion() {
+       return region;
+     }
+     public String getLeader() {
+       return leader;
+     }
 
-  public String getName() {
-    return poke.toString();
-  }
-
-  public String getValue() {
-    return type.toString();
-  }
-
-  public Habitat() {
-    poke = "";
-    type = "";
-  }
-}
+     public Habitat(String r,String l) {
+       region = r;
+       leader = l;
+     }
+   }
