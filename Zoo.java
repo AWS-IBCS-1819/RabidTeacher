@@ -81,22 +81,22 @@ Animal p21 = new Animal(name.get(20),element.get(20));
 
 HashMap<String, Animal[]> info = new HashMap<String, Animal[]>();
 Animal[] rock =  {p1, p2, p3};
-    info.put(h1.getRegion(), rock);//pewter pokemon
-
-    /*info.put(h2.getRegion, {p4, p5, p6});//cerlean pokemon
-
-    info.put(h3.getRegion, {p7, p8, p9});//vermilion pokemon
-
-    info.put(h4.getRegion,{p10, p11, p12});//celadon pokemon
-
-    info.put(h5.getRegion, {p13, p14, p15});//olivine pokemon
-
-    info.put(h6.getRegion,{p16, p17, p18});//petalbirg pokemon
-
-    info.put(h7.getRegion,{p19, p20, p21});//laverre pokemon*/
-
+    info.put(h1.getLeader(), rock);//pewter pokemon
+Animal[] water =  {p4, p5, p6};
+    info.put(h2.getLeader(), water);//cerlean pokemon
+Animal[] electric =  {p7, p8, p9};
+    info.put(h3.getLeader(), electric );//vermilion pokemon
+Animal[] grass =  {p10, p11, p12};
+    info.put(h4.getLeader(), grass);//celadon pokemon
+Animal[] steel =  {p13, p14, p15};
+    info.put(h5.getLeader(), steel );//olivine pokemon
+Animal[] normal =  {p16, p17, p18};
+    info.put(h6.getLeader(), normal);//petalbirg pokemon
+Animal[] fairy =  {p19, p20, p21};
+    info.put(h7.getLeader(), fairy);//laverre pokemon
 }
 public static void main(String[] args) {
+
 HashMap<Animal, Habitat> info;
 Zoo z = new Zoo();
   System.out.println("Please pick a region you would like to visit: ");
@@ -104,11 +104,10 @@ Zoo z = new Zoo();
   Scanner input = new Scanner(System.in);
   String result = input.next();
 
-
- if(result.equals ("1")){//Pewter
-
+if (info.containsValue(input.next())){
+ System.out.println(info.get(input.next()));
     }
-  if(result.equals ("2")){//Cerulean
+/*  if(result.equals ("2")){//Cerulean
 
     }
   if(result.equals ("3")){//Vermilion
@@ -129,6 +128,5 @@ Zoo z = new Zoo();
   if (result.equals("8")){
   System.exit(0);
 }*/
-
   }
-}
+  }
