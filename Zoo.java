@@ -3,8 +3,9 @@ import java.io.*;
 
 public class Zoo {
 
-public Zoo(){
-
+//public Zoo(){
+public static void main(String[] args) {
+  while (true){
   ArrayList<String> name = new ArrayList<String>();
   ArrayList<String> element = new ArrayList<String>();
   ArrayList<String> buildWaste = new ArrayList<String>();
@@ -81,52 +82,37 @@ Animal p21 = new Animal(name.get(20),element.get(20));
 
 HashMap<String, Animal[]> info = new HashMap<String, Animal[]>();
 Animal[] rock =  {p1, p2, p3};
-    info.put(h1.getLeader(), rock);//pewter pokemon
+    info.put(h1.getRegion(), rock);//pewter pokemon
 Animal[] water =  {p4, p5, p6};
-    info.put(h2.getLeader(), water);//cerlean pokemon
+    info.put(h2.getRegion(), water);//cerlean pokemon
 Animal[] electric =  {p7, p8, p9};
-    info.put(h3.getLeader(), electric );//vermilion pokemon
+    info.put(h3.getRegion(), electric );//vermilion pokemon
 Animal[] grass =  {p10, p11, p12};
-    info.put(h4.getLeader(), grass);//celadon pokemon
+    info.put(h4.getRegion(), grass);//celadon pokemon
 Animal[] steel =  {p13, p14, p15};
-    info.put(h5.getLeader(), steel );//olivine pokemon
+    info.put(h5.getRegion(), steel );//olivine pokemon
 Animal[] normal =  {p16, p17, p18};
-    info.put(h6.getLeader(), normal);//petalbirg pokemon
+    info.put(h6.getRegion(), normal);//petalbirg pokemon
 Animal[] fairy =  {p19, p20, p21};
-    info.put(h7.getLeader(), fairy);//laverre pokemon
-}
-public static void main(String[] args) {
+    info.put(h7.getRegion(), fairy);//laverre pokemon
 
-HashMap<Animal, Habitat> info;
+
+
 Zoo z = new Zoo();
-  System.out.println("Please pick a region you would like to visit: ");
-  System.out.println("1) Pewter \n2) Cerulean \n3) Vermilion \n4) Celadon \n5) Olivine \n6) Petalburg \n7) Laverre \n8) Quit");
+  System.out.println("\nPlease pick a region you would like to visit\n--------------------------------------------- ");
+  System.out.println("Pewter \nCerulean \nVermilion \nCeladon \nOlivine \nPetalburg \nLaverre \nQuit\n");
   Scanner input = new Scanner(System.in);
   String result = input.next();
 
-if (info.containsValue(input.next())){
- System.out.println(info.get(input.next()));
-    }
-/*  if(result.equals ("2")){//Cerulean
 
-    }
-  if(result.equals ("3")){//Vermilion
-
-    }
-  if(result.equals ("4")){//Celadon
-
-    }
-  if(result.equals ("5")){//Olivine
-
-    }
-  if(result.equals ("6")){//Petalburg
-
-    }
-  if(result.equals ("7")){//Laverre
-
+if (info.containsKey(result)){
+  Animal[] pokemon = info.get(result);
+  for(int i = 0; i < pokemon.length; i++){
+ System.out.println("--" + pokemon[i].getName());
+      }
+    }else if (result.equals("Quit")){
+      System.exit(0);
+        }
+      }
   }
-  if (result.equals("8")){
-  System.exit(0);
-}*/
-  }
-  }
+}
